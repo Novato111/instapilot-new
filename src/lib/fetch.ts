@@ -71,7 +71,7 @@ export const generateTokens = async (code: string) => {
   insta_form.append("grant_type", "authorization_code");
   insta_form.append(
     "redirect_uri",
-    `https://df8d-103-72-72-51.ngrok-free.app/callback/instagram`
+    `https://instapilot-new-aah3.vercel.app/callback/instagram`
   );
   insta_form.append("code", code);
 
