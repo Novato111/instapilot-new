@@ -16,7 +16,7 @@ type Props = {
 const PostButton = ({ id }: Props) => {
   const { data } = useQueryAutomationPosts();
   const { posts, onSelectPost, mutate, isPending } = useAutomationPosts(id);
-
+console.log(data)
   return (
     <TriggerButton label="Attach a post">
       {data?.status === 200 ? (
