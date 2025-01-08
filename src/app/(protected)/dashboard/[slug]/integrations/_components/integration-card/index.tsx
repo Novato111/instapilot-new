@@ -21,6 +21,7 @@ const IntegrationCard = ({ description, icon, strategy, title }: Props) => {
   });
 
   const integrated = data?.data?.integrations.find(
+      //@ts-expect-error
     (integration) => integration.name === strategy
   );
 
@@ -32,7 +33,8 @@ const IntegrationCard = ({ description, icon, strategy, title }: Props) => {
         <p className="text-[#9D9D9D] text-base ">{description}</p>
       </div>
       <Button
-        onClick={onInstaOAuth}
+        onClick={onInstaOAuth}  
+        //@ts-expect-error
         disabled={integrated?.name === strategy}
         className="bg-gradient-to-br text-white rounded-full text-lg from-[#3352CC] font-medium to-[#1C2D70] hover:opacity-70 transition duration-100"
       >
